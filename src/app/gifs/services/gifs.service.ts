@@ -27,7 +27,7 @@ export class GifsService {
 
   }
 
-  buscarGifs(query: string) {
+  buscarGifs(query: string = '') {
 
     query = query.trim().toLocaleLowerCase();
 
@@ -41,7 +41,7 @@ export class GifsService {
 
     }
 
-    this.http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=0jwstaV43B08o0aQcdT52m1FXspVbIf0&q=${query}&limit=10`)
+    this.http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=0jwstaV43B08o0aQcdT52m1FXspVbIf0&q=${query}&limit=12`)
       .subscribe((res: any) => {
         console.log(this.resultados);
         this.resultados = res.data
