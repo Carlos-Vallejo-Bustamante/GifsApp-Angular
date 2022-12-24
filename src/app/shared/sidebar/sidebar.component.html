@@ -1,19 +1,24 @@
-<div class="bg-dark border-right p-3" id="sidebar">
-      <h3 class="text-light">
-          Gifs App
-      </h3>
+<h2>Busquedas</h2>
+    <hr>
+    <ul class="list-group">
 
-      <hr class="text-white">
+        <li routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="list-group-item">
+            Buscar país
+        </li>
 
-      <div class="list-group list-reset">
+        <li routerLink="continente"
+            routerLinkActive="active"
+            class="list-group-item">
+            Por continente
+        </li>
 
-        <a *ngFor="let query of historial"
-            href="#"
-            (click)="buscar( query )"
-            class="list-group-item list-group-item-action">
-            {{ query | titlecase }}
-        </a>
+        <li routerLink="capital"
+            routerLinkActive="active"
+            class="list-group-item">
+            Por capital
+        </li>
 
-      </div>
-
-</div>
+    </ul>

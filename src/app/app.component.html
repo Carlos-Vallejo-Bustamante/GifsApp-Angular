@@ -1,10 +1,11 @@
+<div class="row container mt-4">
 
-<div class="d-flex">
+<div class="col-3">
+    <app-sidebar></app-sidebar>
+</div>
 
-  <!-- sidebar -->
-  <app-sidebar></app-sidebar>
-  <!-- End sidebar -->
-
-  <app-gifs-page class="container"></app-gifs-page>
-
+<div class="col">
+    <router-outlet></router-outlet>
+</div>
+    
 </div>

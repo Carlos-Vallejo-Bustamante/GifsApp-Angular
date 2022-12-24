@@ -1,10 +1,7 @@
-html,
-body {
-    height: 100%;
+.small-flag {
+    width: 50px;
 }
 
-#sidebar {
-    height: 100%;
-    min-height: 100vh;
-    min-width: 180px;
+.medium-flag {
+    width: 120px;
 }

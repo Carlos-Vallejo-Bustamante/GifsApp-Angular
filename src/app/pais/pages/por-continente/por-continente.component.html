@@ -1,0 +1,38 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+    <div class="container">
+        <h3>Por Continente <small>{{ continenteActivo | titlecase }}</small></h3>
+        <hr>
+    
+    <h3>Seleccione el continente</h3>
+    
+    <div class="row">
+        <div class="col">
+    
+    <!-- [class.active]="continente === continenteActivo" -->
+    <!-- [ngClass]="{
+                    'btn-primary': continente === continenteActivo,
+                    'btn-outline-primary': continente !== continenteActivo
+                }" -->
+    <!-- [class]="(continente === continenteActivo) ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'" -->
+    
+            <button
+                *ngFor="let continente of continentes"
+                (click)="buscar( continente )"
+                class="btn btn-outline-primary me-1 mb-1"
+                [class]="getClassCSS( continente )">
+                {{ continente | uppercase }}
+            </button>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div *ngIf="paises.length > 0" class="row">
+        <div class="col">
+            <app-pais-tabla [paises]="paises"></app-pais-tabla>
+        </div>
+    </div>
+    
+    </div>
+</div>
+
